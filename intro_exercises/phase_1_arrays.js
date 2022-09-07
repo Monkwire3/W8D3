@@ -24,3 +24,27 @@ Array.prototype.twoSum = function() {
 };
 
 console.log([1,-1, -1, 3, 2, -2].twoSum());
+
+Array.prototype.transpose = function() {
+    const transposed =  [];
+    console.log(this)
+
+    for (let i = 0; i < this[0].length; i++) {
+        let sub = [];
+        for (let j = 0; j < this.length; j++) {
+            console.log(`i: ${i}; j: ${j}`)
+            sub.push(this[j][i]);
+        };
+        transposed.push(sub);
+    };
+
+    return transposed;
+}
+
+
+console.log([[1, 2, 3], [4, 5, 6], [7, 8, 9]].transpose());
+console.log([[1, 2, 3], [4, 5, 6]].transpose());
+
+
+
+
