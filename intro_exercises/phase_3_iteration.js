@@ -12,3 +12,18 @@ Array.prototype.bubbleSort = function() {
     } ;
     return sorted;
 };
+
+Array.prototype.substrings = function() {
+    const subs = [];
+
+    for (let i = 0; i < this.length - 1; i++) {
+        for (let j = 1; j < this.length; j++) {
+            if (j > i) {
+                subs.push(this[i][j]);
+            };
+        };
+    };
+    return subs;
+};
+
+
